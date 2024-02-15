@@ -104,7 +104,7 @@ public class GameLand implements Runnable {
 //        astro.printInfo();
         ob1 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 2, 5, 1);
         ob2 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 3, 4, 2);
-        ob3 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 2, 3, 3 );
+        ob3 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 2, 3, 3);
         ob4 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 4, 7, 1);
         ob5 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 1, 5, 2);
         ob6 = new Hero((int)(Math.random() * 901), (int)(Math.random() * 601), 4, 3, 3);
