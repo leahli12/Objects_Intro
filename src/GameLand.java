@@ -213,6 +213,7 @@ public class GameLand implements Runnable {
 //        if (!(ob2.rec.intersects(ob1.rec))){
 //            ob2IsIntersectingob1 = false;
 //        }
+
         if (ob1.rec.intersects(ob2.rec) && (!ob1IsIntersectingob2)){
             ob1IsIntersectingob2 = true;
             winner = faceOff(ob1, ob2);
@@ -236,6 +237,12 @@ public class GameLand implements Runnable {
             else if (winner == 2){
                 ob1.identity = ob3.identity;
             }
+            else if (winner == 0) {
+                ob1.dx = -1 * ob1.dx;
+                ob1.dy = -1 * ob1.dy;
+                ob3.dx = -1 * ob3.dx;
+                ob3.dy = -1 * ob3.dy;
+            }
         }
         if (!(ob1.rec.intersects(ob3.rec))){
             ob1IsIntersectingob3 = false;
@@ -255,7 +262,7 @@ public class GameLand implements Runnable {
             ob1IsIntersectingob4 = false;
         }
 
-        if (ob1.rec.intersects(ob2.rec) && (!ob1IsIntersectingob5)){
+        if (ob1.rec.intersects(ob5.rec) && (!ob1IsIntersectingob5)){
             ob1IsIntersectingob5 = true;
             winner = faceOff(ob1, ob5);
             if (winner == 1){
@@ -263,6 +270,12 @@ public class GameLand implements Runnable {
             }
             else if (winner == 2){
                 ob1.identity = ob5.identity;
+            }
+            else if (winner == 0) {
+                ob1.dx = -1 * ob1.dx;
+                ob1.dy = -1 * ob1.dy;
+                ob5.dx = -1 * ob5.dx;
+                ob5.dy = -1 * ob5.dy;
             }
         }
         if (!(ob1.rec.intersects(ob5.rec))){
@@ -277,6 +290,12 @@ public class GameLand implements Runnable {
             }
             else if (winner == 2){
                 ob1.identity = ob6.identity;
+            }
+            else if (winner == 0) {
+                ob1.dx = -1 * ob1.dx;
+                ob1.dy = -1 * ob1.dy;
+                ob6.dx = -1 * ob6.dx;
+                ob6.dy = -1 * ob6.dy;
             }
         }
         if (!(ob1.rec.intersects(ob6.rec))){
@@ -305,6 +324,13 @@ public class GameLand implements Runnable {
             }
             else if (winner == 2){
                 ob2.identity = ob4.identity;
+            }
+            else if (winner == 0){
+                // Growing interaction between the two fastest objects
+                ob2.width += 5;
+                ob2.height += 5;
+                ob4.width += 5;
+                ob4.width += 5;
             }
         }
         if (!(ob2.rec.intersects(ob4.rec))){
@@ -362,6 +388,12 @@ public class GameLand implements Runnable {
             else if (winner == 2){
                 ob3.identity = ob5.identity;
             }
+            else if (winner == 0) {
+                ob5.dx = -1 * ob5.dx;
+                ob5.dy = -1 * ob5.dy;
+                ob3.dx = -1 * ob3.dx;
+                ob3.dy = -1 * ob3.dy;
+            }
         }
         if (!(ob3.rec.intersects(ob5.rec))){
             ob3IsIntersectingob5 = false;
@@ -417,6 +449,12 @@ public class GameLand implements Runnable {
             }
             else if (winner == 2){
                 ob5.identity = ob6.identity;
+            }
+            else if (winner == 0) {
+                ob5.dx = -1 * ob5.dx;
+                ob5.dy = -1 * ob5.dy;
+                ob6.dx = -1 * ob6.dx;
+                ob6.dy = -1 * ob6.dy;
             }
         }
         if (!(ob5.rec.intersects(ob6.rec))){
